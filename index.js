@@ -10,5 +10,10 @@ function firstUpper(arr) {
     return arr.map(el => el.charAt(0).toUpperCase() + el.slice(1).toLowerCase())
 }
 
-module.exports = {sum, allUpper, firstUpper};
+function allLower(arr) {
+    return arr.map(el => el.toLowerCase())
+}
+
+
+module.exports = {sum, allUpper, firstUpper, allLower};
 

@@ -1,6 +1,6 @@
 //const assert = require('assert');
 const expect = require('chai').expect // more popular
-const {sum, allUpper, firstUpper} = require ('../index');
+const {sum, allUpper, firstUpper, allLower} = require ('../index');
 
 describe ('SUM', () => {
     it('calc sum with positive numbers', () => {
@@ -29,6 +29,16 @@ describe ('FIRST UPPER', () => {
 
     it('input first upper case', () => {
         expect(firstUpper(['A', 'Bc', 'Abc'])).eql(['A', 'Bc', 'Abc']);
+    });
+})
+
+describe ('ALL LOWER', () => {
+    it('input all upper case', () => {
+        expect(allLower(['A', 'BC', 'ABC'])).eql(['a', 'bc', 'abc']);
+    });
+
+    it('input all lower case', () => {
+        expect(allLower(['a', 'bc', 'abc'])).eql(['a', 'bc', 'abc']);
     });
 })
 
